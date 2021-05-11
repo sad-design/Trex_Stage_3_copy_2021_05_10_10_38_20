@@ -10,5 +10,24 @@
   <body>
       <script src="sketch.js"></script>
   
+<div id="centr">
+      <button oneclick="my()" id = "mybtn" >click here to jump</button>
+    </div>
 
-</body></html>
+      <p id="asdf"></p>
+      <script>
+
+document.getElementById("mybtn").onclick = function() {my()};
+
+
+function my() {
+        trex.velocityY = -12;
+      console.log("hi");
+
+    }
+
+      </script>
+      
+
+</body>
+</html>
