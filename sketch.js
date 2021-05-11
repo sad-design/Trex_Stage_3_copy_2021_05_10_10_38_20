@@ -13,9 +13,10 @@ var score=0;
 var gameOver, restart;
 
 
-var x = (windoWidth/2);
+var x = (windowWidth/2);
 
-console.log(windowWidth)
+
+
 
 
 function preload(){
@@ -54,7 +55,7 @@ function setup() {
   ground.x = ground.width /2;
   ground.velocityX = -(6 + 3*score/100);
   
-  gameOver = createSprite(x,100);
+  gameOver = createSprite(windowWidth/2,100);
   gameOver.addImage(gameOverImg);
   
   restart = createSprite(windowWidth/2,140);
@@ -78,7 +79,7 @@ function setup() {
 function draw() {
   //trex.debug = true;
   background(255);
-  text("Score: "+ score, 500,50);
+  text("Score: "+ score, windowWidth/2,50);
   console.log(x);
 
   if (gameState===PLAY){
@@ -87,7 +88,11 @@ function draw() {
   
     if(keyDown("space") && trex.y >= 159) {
       trex.velocityY = -12;
+      
+
     }
+
+   
   
     trex.velocityY = trex.velocityY + 0.8
   
